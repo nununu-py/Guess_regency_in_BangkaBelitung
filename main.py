@@ -29,10 +29,10 @@ while guess < 7:
         display_guess.goto(int(data_regency.x), int(data_regency.y))
         display_guess.write(arg=f"{user_guess}", align="center", font=("Arial", 10, "bold"))
         guess += 1
-    elif user_guess == "Exit":
         wrong_user_guess = [wrong_answer for wrong_answer in list_user_guess if wrong_answer not in all_regency]
         invalid_guess = pandas.DataFrame(wrong_user_guess)
         invalid_guess.to_csv("invalid_user_guess.csv")
+    elif user_guess == "Exit":
         break
 
 screen.exitonclick()
